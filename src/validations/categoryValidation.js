@@ -11,7 +11,6 @@ const createNew = async (req, res, next) => {
 
   try {
     correctCondition.validateAsync(req.body, { abortEarly: false })
-    console.log('code run qua validate')
 
     next()
   } catch (error) {

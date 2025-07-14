@@ -15,9 +15,9 @@ const START_SERVER = () => {
 
   app.use(express.json())
 
-  app.use(errorHandlingMiddleware)
-
   app.use('/v1', APIs_v1)
+
+  app.use(errorHandlingMiddleware)
 
   app.listen(env.APP_PORT, env.APP_HOST, () => {
     console.log(`Hello ${env.AUTHOR}, I am running at http://${env.APP_HOST}:${env.APP_PORT}/`)
