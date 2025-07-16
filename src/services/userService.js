@@ -3,7 +3,7 @@ import { StatusCodes } from 'http-status-codes'
 import { userModel } from '~/models/userModel'
 import ApiError from '~/utils/ApiError'
 import bcryptjs from 'bcryptjs'
-import { JwtProvider } from '~/providers/JWTProvider'
+import { JwtProvider } from '~/providers/JwtProvider'
 import { env } from '~/config/environment'
 import { pickUser } from '~/utils/formatters'
 

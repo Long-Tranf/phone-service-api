@@ -10,4 +10,7 @@ Router.route('/login')
 Router.route('/register')
   .post(userValidation.createNew, userController.createNew)
 
+Router.route('/logout')
+  .delete(userController.logout)
+
 export const userRoute = Router

@@ -31,7 +31,17 @@ const login = async (req, res, next) => {
   } catch (error) { next(error) }
 }
 
+const logout = (req, res, next) => {
+  try {
+    res.clearCookie('accessToken')
+    res.clearCookie('refreshToken')
+
+    res.status(StatusCodes.OK).json({ logoutStatus: true })
+  } catch (error) { next(error) }
+}
+
 export const userController = {
   login,
-  createNew
+  createNew,
+  logout
 }
